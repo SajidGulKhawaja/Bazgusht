@@ -1,0 +1,127 @@
+/* You can add global styles to this file, and also import other style files */
+/* ---------- Import Urdu Font ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
+
+/* ---------- Root Theme ---------- */
+:root {
+  --bg-color: #fdfdfd;
+  --text-color: #1a1a1a;
+  --accent-color: #444;
+  --muted-color: #888;
+  --card-bg: #ffffff;
+  --shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  --radius: 16px;
+}
+
+/* ---------- Base Styles ---------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Scheherazade New', serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 2.2;
+  font-size: 1.2rem;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: #222;
+  color: #fff;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+header .subtitle {
+  color: var(--muted-color);
+  font-size: 1rem;
+}
+
+/* ---------- Poem Card ---------- */
+.poem-card {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 1.8rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.poem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.poem-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.poem-meta {
+  font-size: 0.9rem;
+  color: var(--muted-color);
+  margin-bottom: 1.5rem;
+}
+
+.poem-content {
+  white-space: pre-line;
+  line-height: 2.3;
+  font-size: 1.25rem;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--muted-color);
+  font-size: 0.9rem;
+}
+
+/* ---------- Links ---------- */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* ---------- Mobile Responsive ---------- */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem;
+  }
+
+  .poem-card {
+    padding: 1.4rem;
+  }
+
+  .poem-title {
+    font-size: 1.3rem;
+  }
+
+  .poem-content {
+    font-size: 1.1rem;
+  }
+}
