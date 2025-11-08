@@ -1,0 +1,6 @@
+[
+  { "title": "ہوم", "link": "/" },
+  { "title": "فہرست", "link": "/poems" },
+  { "title": "مصنف کا تعارف", "link": "/about-author" },
+  { "title": "رابطہ کریں", "link": "/contact" }
+]

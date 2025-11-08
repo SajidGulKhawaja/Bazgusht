@@ -1,0 +1,61 @@
+.main-content {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.app-header .site-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+.header-divider {
+  border: none;
+  height: 3px;
+  background-color: #16a085;
+  width: 50px;
+  margin: 0.5rem auto 1rem auto;
+}
+
+.construction-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #444;
+}
+
+.construction-icon {
+  font-size: 4rem;
+}
+
+.construction-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.construction-section p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.app-footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+.footer-divider {
+  border: none;
+  height: 2px;
+  background-color: #3498db;
+  width: 30px;
+  margin: 0 auto 0.5rem auto;
+}

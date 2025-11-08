@@ -1,0 +1,5 @@
+<section *ngIf="poem" class="poem-detail">
+  <h2>{{ poem.title }}</h2>
+  <div class="poem-date">{{ poem.date | date:'longDate' }}</div>
+  <pre>{{ poem.content }}</pre>
+</section>

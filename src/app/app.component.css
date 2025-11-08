@@ -1,0 +1,204 @@
+/* App Container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #4c4b4b;  /* dark grey */
+  color: #fff;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #888;
+  padding-bottom: 0.5rem;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+.sidebar ul li {
+  margin: 0.5rem 0;
+}
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar ul li a:hover {
+  background-color: #666;
+  color: #ffeb3b;
+}
+
+/* Main content */
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+}
+
+/* Header: Title & Author */
+.app-header .site-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50; /* dark blue */
+  margin-bottom: 0.5rem;
+}
+
+.header-divider {
+  border: none;
+  height: 3px;
+  background-color: #16a085; /* teal */
+  width: 50px;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.app-header .subtitle {
+  font-size: 1.2rem;
+  color: #e67e22; /* orange */
+  margin-bottom: 2rem;
+}
+
+/* Latest Poem */
+.latest-poem h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #34495e; /* muted dark blue */
+}
+
+.latest-poem .poem-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.latest-poem .couplet {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif;
+  text-align: justify;
+  white-space: pre-line;   /* preserves \n as line breaks */
+  text-justify: inter-word;
+  direction: rtl;
+  margin-bottom: 1rem;
+}
+
+.latest-poem .read-more {
+  text-decoration: none;
+  color: #333;           /* default color matches poem-card links */
+  font-weight: 600;
+  transition: color 0.2s; /* smooth transition */
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.latest-poem .read-more:hover {
+  color: #007bff;        /* hover color matches poem-card hover */
+  text-decoration: none; /* remove underline on hover */
+}
+
+/* Couplet of the Day */
+.couplet-day {
+  margin-top: 2.5rem;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  direction: rtl;
+  text-align: center;
+}
+
+.couplet-day h2 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 1rem;
+}
+
+.couplet-day .couplet .line {
+  font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif;
+  font-size: 1.2rem;
+  margin: 0.4rem 0;
+  color: #222;
+}
+
+.couplet-day .poem-source {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.couplet-day .poem-link {
+  text-decoration: none;
+  color: #333;            /* default color matches read-more */
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.couplet-day .poem-link:hover {
+  color: #007bff;         /* same hover color as read-more */
+  text-decoration: none;  /* remove underline on hover */
+}
+
+/* Couplet Navigation Arrows (simple symbols, no circle) */
+.couplet-day .couplet-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.couplet-day .couplet-nav .arrow {
+  background: none;           /* remove teal background */
+  border: none;               /* remove border */
+  width: auto;                /* remove fixed width */
+  height: auto;               /* remove fixed height */
+  border-radius: 0;           /* remove circle */
+  color: #16a085;             /* teal arrow color */
+  font-size: 2rem;            /* make arrows bigger */
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.couplet-day .couplet-nav .arrow:hover {
+  color: #138d75;             /* dark teal on hover */
+  transform: scale(1.2);      /* subtle zoom on hover */
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.footer-divider {
+  border: none;
+  height: 2px;
+  background-color: #3498db; /* light blue */
+  width: 30px;
+  margin: 0 auto 0.5rem auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .couplet-day .couplet-nav {
+    justify-content: center;
+    gap: 1rem;
+  }
+}

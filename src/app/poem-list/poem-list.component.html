@@ -1,0 +1,6 @@
+<section class="poem-list">
+  <div *ngFor="let poem of poems" class="poem-card">
+    <h3>{{ poem.title }}</h3>
+    <a [routerLink]="['/poem', poem.id]">مزید پڑھیں →</a>
+  </div>
+</section>

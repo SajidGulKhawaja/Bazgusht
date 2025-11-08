@@ -1,12 +1,52 @@
-<div class="container">
-  <header>
-    <h1>Aqs-e-Maa</h1>
-    <div class="subtitle">ساجد گل خواجہ</div>
-  </header>
+<div class="app-container" dir="rtl">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h3>فہرستِ مضامین</h3>
+    <ul>
+      <li *ngFor="let item of toc">
+        <a [routerLink]="item.link">{{ item.title }}</a>
+      </li>
+    </ul>
+  </aside>
 
-  <router-outlet></router-outlet>
+  <!-- Main content -->
+  <main class="main-content">
+    <!-- Header -->
+    <header class="app-header">
+      <h1 class="site-title">بازگشت</h1>
+      <hr class="header-divider" />
+      <div class="subtitle">ساجد گل خواجہ</div>
+    </header>
 
-  <footer>
-    <p>© {{ currentYear }} Sajid Gul Khawaja — All rights reserved.</p>
-  </footer>
+    <!-- Rotating Couplets Section (Home Only) -->
+    <section class="couplet-day" *ngIf="couplets.length && isHome">
+      <h2>نسیمِ کلام</h2>
+
+      <div class="couplet">
+        <p class="line">{{ getCurrentCouplet().line1 }}</p>
+        <p class="line">{{ getCurrentCouplet().line2 }}</p>
+      </div>
+
+      <div class="poem-source">
+        <a [routerLink]="['/poem', getCurrentCouplet().poemId]" class="poem-link">
+          {{ getCurrentCouplet().poemTitle }}
+        </a>
+      </div>
+
+      <!-- Navigation Arrows (Right / Left flipped visually) -->
+      <div class="couplet-nav">
+        <span class="arrow right-arrow" (click)="nextCouplet()">&#8594;</span>
+        <span class="arrow left-arrow" (click)="prevCouplet()">&#8592;</span>
+      </div>
+    </section>
+
+    <!-- Routed pages -->
+    <router-outlet></router-outlet>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <hr class="footer-divider" />
+      <p>© {{ currentYear }} Sajid Gul Khawaja — All rights reserved</p>
+    </footer>
+  </main>
 </div>
