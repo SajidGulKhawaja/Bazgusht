@@ -1,0 +1,5 @@
+[
+    { "title": "صفحہ اول", "link": "/" },
+    { "photo": "assets/images/author.png"},
+    { "title": "فہرست", "link": "/poems" }
+]
